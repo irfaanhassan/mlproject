@@ -3,7 +3,7 @@ import sys
 
 import numpy as np 
 import pandas as pd
-#import dill
+import dill
 import pickle
 from sklearn.metrics import r2_score
 from sklearn.model_selection import GridSearchCV
@@ -21,13 +21,6 @@ def save_object(file_path, obj):
 
     except Exception as e:
         raise CustomException(e, sys)
-    #Purpose: Saves Python objects as files using pickle
-
-#Auto-creates directory if needed
-
-#Writes in binary format
-
-#Handles any type of Python object
     
 def evaluate_models(X_train, y_train,X_test,y_test,models,param):
     try:
